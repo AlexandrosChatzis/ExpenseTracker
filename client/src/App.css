@@ -1,0 +1,145 @@
+body {
+  background-color: whitesmoke;
+}
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.nav-link {
+  display: inline;
+}
+/* main::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Hide scrollbar for IE and Edge */
+/* main {
+  -ms-overflow-style: none;
+} */
+/* @import 'https://bootswatch.com/4/journal/bootstrap.min.css'; */
+
+/*Mobile View*/
+@media only screen and (max-width: 1365px) {
+  table {
+    width: 100%;
+
+    margin-top: 1rem;
+  }
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    box-shadow: 0 0 10px 10px #999;
+  }
+
+  tr + tr {
+    margin-top: 1.5em;
+  }
+
+  td {
+    /* make like a "row" */
+    border: none;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.281);
+    position: relative;
+    padding-left: 50%;
+    background-color: white;
+    text-align: left;
+  }
+
+  td:before {
+    font-weight: 600;
+    content: attr(data-label);
+    display: inline-block;
+    line-height: 1.5;
+    margin-left: -100%;
+    width: 100%;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  table {
+    border-collapse: separate;
+    border-radius: 6px;
+    width: 100%;
+    table-layout: fixed;
+    /* border-collapse: collapse; */
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+  }
+  tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+  }
+  th {
+    background: #0bb3d1;
+    color: #fff;
+    font-weight: 600;
+  }
+  td,
+  th {
+    padding: 2px;
+    border: 1px solid #ccc;
+    text-align: left;
+    text-align: center;
+  }
+  table tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+  }
+
+  /* top-right border-radius */
+  table tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+  }
+
+  /* bottom-left border-radius */
+  table tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+  }
+
+  /* bottom-right border-radius */
+  table tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+  }
+}
